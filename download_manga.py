@@ -3,7 +3,7 @@ import shutil
 import os
 
 #This stores the system path where you will put the folder and the folder you want to create. Must be an absolute path (i.e. C:\\X\\Y\\Z for Windows (with double slashes) and /X/Y/Z for Linux,Mac)
-working_path='C:\\Users\\Alberto\\Documents'
+working_path='C:\\Users\\AlbertoN\\Folder'
 main_folder='one_piece_color'
 
 #Attemps to create the main folder for the chapters. Swap the commented line if you are on Linux
@@ -16,7 +16,7 @@ except:
 
 chap=1
 #Declares the manga you want to download, until the name of the manga like the example
-manga_page="https://scans-hot.leanbox.us/manga/One-Piece-Digital-Colored-Comics/"
+manga_page="https://domain.domain/manga/NameOfManga/"
 img="{}-{}.png"
 
 #Makes the loop for each chapter using a range from the first to the last. Note: final value of the range must be the last chapter + 1 .Swap the commented line if you are on Linux
