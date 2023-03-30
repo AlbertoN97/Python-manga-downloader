@@ -9,8 +9,13 @@ The author of this script is not linked to any manga page and doesn't pretend to
 How to use it?
 
 1. Install python
-2. Install pip and the respective modules with pip install modulename
-        2.1 Module requests
-                pip install requests
-        2.2 Module shutil
-                pip install shutil
+2. Install pip and the respective modules with pip install modules
+3. pip install requests
+4. pip install shutil
+5. Modify the script as pleased
+6. Execute the python script with
+7. python3 download_manga.py
+8. Enjoy!
+
+
+This is my first python script so please contact me for support and feedback
