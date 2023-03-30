@@ -6,7 +6,7 @@ Please modify the file as you feel to and consider following the commentaries in
 
 The author of this script is not linked to any manga page and doesn't pretend to support the stealing of contents, as this script made for personal purposes such as reading offline.
 
-How to use it?
+        How to use it?
 
 1. Install python
 2. Install pip and the respective modules with pip install modules
