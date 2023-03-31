@@ -2,6 +2,7 @@ import requests
 import shutil
 import os
 
+#This script by AlbertoN97 on github. If you like my work please leave the credit and reference to me if you share it online
 #This stores the system path where you will put the folder and the folder you want to create. In Windows you have to change backslashes \ in the path for slashes / as in Unix systems
 working_path='/some/path/'
 main_folder='myfavouritemanga'
