@@ -50,13 +50,13 @@ for chap in range(1,1005):
         file_name = f"{chap2}-{pag2}.png"
         res = requests.get(url, stream = True)
 
-#If the image is open (which means that it exists) it will download it in the current directory()
+#If the image is open (which means that it exists) it will download it in the current chapter directory
         with open(file_name,'wb') as f:
             shutil.copyfileobj(res.raw, f)
         print('Image sucessfully Downloaded: ',file_name)
         pag+=1
 
-#Removes the last image that make out of the loop (that image doesn't work, its a currupted one that is downloaded)
+#Removes the last image that makes out of the loop (that image doesn't work, its a currupted one that is downloaded)
     try:
         os.remove(path+"/"+(img.format(chap2,pag2)))
         print(f"Chapter {chap2} successfully downloaded")
