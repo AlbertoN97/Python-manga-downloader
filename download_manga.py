@@ -2,7 +2,7 @@ import requests
 import shutil
 import os
 
-#This script by AlbertoN97 on github. If you like my work please leave the credit and reference to me if you share it online
+#This script by AlbertoN97 on GitHub. If you like my work please leave the credit and reference to me if you share it online
 #This stores the system path where you will put the folder and the folder you want to create. In Windows you have to change backslashes \ in the path for slashes / as in Unix systems
 working_path='/some/path/'
 main_folder='myfavouritemanga'
@@ -56,7 +56,7 @@ for chap in range(1,1005):
         print('Image sucessfully Downloaded: ',file_name)
         pag+=1
 
-#Removes the last image that make out of the loop (that image doesn't work, its a currupted one that is downloaded).Swap the commented lines if you are on Linux
+#Removes the last image that make out of the loop (that image doesn't work, its a currupted one that is downloaded)
     try:
         os.remove(path+"/"+(img.format(chap2,pag2)))
         print(f"Chapter {chap2} successfully downloaded")
