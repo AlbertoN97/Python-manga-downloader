@@ -22,5 +22,10 @@ How to use it?
 
 5. Enjoy the reading!
 
+Example result:
+
+![chapter folders in manga folter](https://github.com/AlbertoN97/Python-manga-downloader/blob/main/example_result.png)
+
+![chapter images](https://github.com/AlbertoN97/Python-manga-downloader/blob/main/example_images.png)
 
 This is my first python script so please contact me for support and feedback.
