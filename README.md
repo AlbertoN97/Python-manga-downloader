@@ -15,7 +15,7 @@ How to use it?
 
         pip install shutil
 
-3. Modify the script as pleased (check comments if you run it on Linux)
+3. Modify the script as pleased if you need to
 4. Execute the python script with
 
         python3 download_manga.py

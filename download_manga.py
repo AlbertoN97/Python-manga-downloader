@@ -2,15 +2,14 @@ import requests
 import shutil
 import os
 
-#This stores the system path where you will put the folder and the folder you want to create. Must be an absolute path (i.e. C:\\X\\Y\\Z for Windows (with double slashes) and /X/Y/Z for Linux,Mac)
-working_path='C:\\Users\\AlbertoN\\Folder'
-main_folder='one_piece_color'
+#This stores the system path where you will put the folder and the folder you want to create. In Windows you have to change backslashes \ in the path for slashes / as in Unix systems
+working_path='/some/path/'
+main_folder='myfavouritemanga'
 
-#Attemps to create the main folder for the chapters. Swap the commented line if you are on Linux
+#Attemps to create the main folder for the chapters.
 try:
-    os.mkdir(working_path+main_folder)
-    #os.mkdir(working_path+'/'+main_folder)
-    print("Folder {main_folder} created in {working_path}")
+    os.mkdir(working_path+'/'+main_folder)
+    print(f"Main folder {main_folder} created in {working_path}")
 except:
     print(f"Error: couldn'\ t make {main_folder} folder")
 
@@ -19,13 +18,12 @@ chap=1
 manga_page="https://domain.domain/manga/NameOfManga/"
 img="{}-{}.png"
 
-#Makes the loop for each chapter using a range from the first to the last. Note: final value of the range must be the last chapter + 1 .Swap the commented line if you are on Linux
+#Makes the loop for each chapter using a range from the first to the last. Note: final value of the range must be the last chapter + 1
 for chap in range(1,1005):
     pag=1
     chap2='{:0>4}'.format(chap)
     pag2='{:0>3}'.format(pag)
-    path=(working_path+main_folder+'//'+chap2)
-#    path=(working_path+'/'+main_folder+'/'+chap2)
+    path=(working_path+'/'+main_folder+'/'+chap2)
 
 #Attemps to create the folder of the chapter with format nnnn(i.e. 0037)
     try:
@@ -34,7 +32,11 @@ for chap in range(1,1005):
         print("Couldn\' create folder "+path)
 
 #Change current directory to the chapter directory
-    os.chdir(path)
+    try:
+        os.chdir(path)
+        print(f"Changed current path to {path}")
+    except:
+        print(f"WARNING: Couldn\'t create {path}"   )
     url = (manga_page+img).format(chap2,pag2)
     print(f"Downloading chapter {chap2}")
     file_name = f"{chap2}-{pag2}.png"
@@ -54,5 +56,8 @@ for chap in range(1,1005):
         pag+=1
 
 #Removes the last image that make out of the loop (that image doesn't work, its a currupted one that is downloaded).Swap the commented lines if you are on Linux
-    os.remove(path+"\\"+(img.format(chap2,pag2)))
-#    os.remove(path+'/'+(img.format(chap2,pag2)))
+    try:
+        os.remove(path+"/"+(img.format(chap2,pag2)))
+        print(f"Chapter {chap2} successfully downloaded")
+    except:
+        print(f"ERROR: Could\'nt remove the image {path}+"/f"+(img.format({chap2},{pag2}))")
