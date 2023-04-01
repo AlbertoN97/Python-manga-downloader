@@ -9,11 +9,9 @@ The author of this script is not linked to any manga page and doesn't pretend to
 How to use it?
 
 1. Install python
-2. Install pip and the respective modules with pip install modules
+2. Install pip and the respective module
 
         pip install requests
-
-        pip install shutil
 
 3. Modify the script as pleased if you need to
 4. Execute the python script with
