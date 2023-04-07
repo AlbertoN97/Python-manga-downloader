@@ -3,7 +3,7 @@ import shutil
 import os
 
 #This script by AlbertoN97 on GitHub. If you like my work please leave the credit comment and reference to me if you share it online
-#This stores the system path where you will put the folder and the folder you want to create.
+#This stores the system path where you will put the folder and the folder you want to create. In Windows you have to change backlashes \ from the path to / 
 working_path='/some/path/'
 main_folder='myfavouritemanga'
 
