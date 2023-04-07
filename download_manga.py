@@ -61,4 +61,4 @@ for chap in range(1,1005):
         os.remove(path+"/"+(img.format(chap2,pag2)))
         print(f"Chapter {chap2} successfully downloaded")
     except:
-        print(f"ERROR: Could\'nt remove the image {path}+"/+f"(img.format({chap2},{pag2}))")
+        print(f"ERROR: Could\'nt remove the image {path}"+'/'+f"(img.format(chap2,pag2))")
